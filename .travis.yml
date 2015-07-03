@@ -1,0 +1,13 @@
+language: go
+go:
+- '1.4'
+script:
+- go test -v ./...
+- go build
+deploy:
+  provider: releases
+  api_key:
+    secure: IPcFK0lJC6uHueOJLjb9T5S0SDcI2C1C2i1hQvgpx77ItO808NZwZqM/pGlr1QlwvOFtXXq6G/gENW+QYeajQnlONw0l/b8SFM2HcNbJI/KMIBbCz4J0qaHiXBLE6XjILsgJPaqBZla+MA6Y89F/ZCGiHCirBf2xn3WwpjjiN/rdUOREMQ7f1YrtTuyVvDetQ2zqCXFRV0mTThnISu/VqTBeh7PAJTBAq8frOQ+Bk51jgLJlWrd+lD68eQdyM9oqPgJS4vjWv/MUGoswKHWSWlQfULK+r/NQMyk+1elrVFxvP0GItkV5sTLgRaSdxVnborJ+rfnTKfM4DDsnOvMF11AKGlnRS9GhsvaDC/f6s/KMs0NyE9Wc6i6BsZ4TdRKBIJWJAjgYaYP4Pt4X4lcC+U3PFF2J9BXuHuC6kosbTbkGNgZ8MVvlb4kvWnwJquMT+A1W5veGV10uiHJtNwb8L5on4JF9x66c+J7RFLsYIO8JhtglG9rwFzoR7seWK9Ud9V3jYkHuvkY8M5bDLq8MBwQmEPXrBF2/eLt4bzpMfO63JQKNejXH/Digynv0fYbHmUys4os8/XvoF1lVUbwI04Rn+iNDS6vbK7YdZsuk0ALZEBt35WGErCv5uVXM6AdC+kenuqPC4M3Y65JdIkIGT23v19hcCRDtLYzOQwwM8UE=
+  file: mysql-glb
+  on:
+    tags: true
