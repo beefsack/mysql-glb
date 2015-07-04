@@ -1,0 +1,14 @@
+/usr/sbin/mysqld, Version: 5.6.19-0ubuntu0.14.04.1-log ((Ubuntu)). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+150703 23:26:04	   15 Query	SET GLOBAL query_cache_size=0
+150703 23:26:13	   15 Query	SELECT
+*
+FROM
+blah_core.users
+150703 23:30:07	   16 Connect	someuser@localhost on blah_core
+		   16 Query	select @@version_comment limit 1
+		   16 Query	SELECT COUNT(DISTINCT user_id), COUNT(DISTINCT organisation_id) FROM usersorganisations WHERE last_on >= UNIX_TIMESTAMP() - 600
+		   16 Quit	
+		   17 Connect	someuser@localhost on blah_core
+		   17 Query	select @@version_comment limit 1
