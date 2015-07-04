@@ -11,16 +11,16 @@ import (
 )
 
 var prefixRegexp = regexp.MustCompile(
-	`^(\d{6} \d{2}:\d{2}:\d{2}|\t)\t\s*([\d]+) ([^\s]+)\t`)
+	`^(\d{6} \d{2}:\d{2}:\d{2}|\t)\t\s*([\d]+) ([^\t]+)\t`)
 
 // Common commands from the query log.
 const (
-	CmdConnect = "Connect"
-	CmdQuit    = "Quit"
-	CmdQuery   = "Query"
-	CmdPrepare = "Prepare"
-	CmdExecute = "Execute"
-	CmdReset   = "Reset"
+	CmdConnect   = "Connect"
+	CmdQuit      = "Quit"
+	CmdQuery     = "Query"
+	CmdPrepare   = "Prepare"
+	CmdExecute   = "Execute"
+	CmdResetStmt = "Reset stmt"
 )
 
 // AtFormat is the format of the time column
